@@ -1,0 +1,337 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 10px;
+}
+
+body {
+    background-color: darkblue;
+}
+
+.card_wrapper {
+    max-width: 1200px;
+    display: flex;
+}
+
+.card_wrapper .card_orange {
+    width: 500px;
+    height: 400px;
+    background-color: orange;
+    position: relative;
+    animation-name: orange;
+    z-index: 1;
+    animation-duration: 3s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes orange {
+    0% {
+        opacity: 0;
+        left: 500px;
+        top: -500px;
+    }
+
+    100% {
+        opacity: 1;
+        top: 300px;
+        left: 500px;
+    }
+}
+
+.card_wrapper .card_blue {
+    width: 400px;
+    height: 400px;
+    background-color: blue;
+    position: relative;
+    z-index: 2;
+    animation-name: blue;
+    animation-duration: 3s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes blue {
+    0% {
+        opacity: 0;
+        transform: rotate(0deg);
+        right: -1200px;
+        top: 400px;
+    }
+
+    100% {
+        transform: rotate(360deg);
+        opacity: 1;
+        right: -720px;
+        top: 400px;
+    }
+}
+
+.card_wrapper .card_st img {
+    width: 600px;
+    height: 400px;
+    z-index: 4;
+    position: relative;
+    animation-name: st;
+    animation-duration: 3s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes st {
+    0% {
+        right: -900px;
+        opacity: 0;
+        top: 340px;
+    }
+
+    100% {
+        top: 340px;
+        right: -75px;
+    }
+}
+
+
+
+.card_wrapper .card h3 {
+    color: orange;
+    padding-bottom: 20px;
+}
+
+.card_wrapper .card p {
+    padding: 20px 0px;
+    color: gray;
+}
+
+.card_wrapper .card p a {
+    color: gray;
+}
+
+.card_wrapper .card button {
+    padding: 10px 25px;
+    border-radius: 20px;
+    color: grey;
+    background-color: white;
+}
+
+.card_wrapper .card {
+    width: 400px;
+    height: 300px;
+    background-color: white;
+    padding: 25px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    position: relative;
+    animation-name: card;
+    animation-duration: 3s;
+    animation-fill-mode: forwards;
+    flex-wrap: wrap;
+    z-index: 5;
+}
+
+@keyframes card {
+    0% {
+        opacity: 0;
+        right: 430px;
+        top: 900px;
+    }
+
+    100% {
+        right: 430px;
+        top: 600px;
+    }
+}
+
+
+
+.card_wrap {
+    width: 1200px;
+    margin: 800px  auto;
+}
+
+.card_wrap h1 {
+    color: white;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: 900;
+    font-size: 60px;
+}
+.card_wrap p {
+    color: white;
+    font-weight: 900;
+    text-align: center;
+    font-size: 24px;
+    padding: 20px;
+}
+
+
+.card_wrap .card_wrapp {
+    width: 100%;
+    display: flex;
+    gap: 50px;
+    justify-content: center;
+}
+
+.card_wrap .card_wrapp .cards{
+    width: 150px;
+    height: 150px;
+    border: 1px solid orange;
+    text-align: center;
+    padding: 60px 0px;
+    color: white;
+    font-weight: 900;
+    font-size: 16px;
+    text-transform: uppercase;
+    border-radius: 50%;
+    transition-duration: 2s;
+}
+
+.card_wrap .card_wrapp .cards:hover {
+    color: grey;
+    border: 1px solid grey;
+    position: relative;
+    top: -20px;
+}
+
+
+
+
+
+
+
+
+
+
+
+/* header {
+    width: 100%;
+    padding: 20px;
+    box-shadow: 0 0 1rem darkcyan;
+}
+
+header nav {
+    max-width: 1200px;
+    display: flex;
+    justify-content: space-between;
+    margin: auto;
+    align-items: center;
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+header nav ul:nth-child(1) li a {
+    color: darkgray;
+    font-size: 3rem;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+header nav ul li a {
+    text-decoration: none;
+    font-size: 2rem;
+    text-transform: uppercase;
+}
+
+.card_wrapper {
+    max-width: 1200px;
+    margin: 10rem auto;
+    display: flex;
+    gap: 4rem;
+    background: url(./fgfg-min.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top;
+}
+
+.card_wrapper .card {
+    display: flex;
+    flex-direction: column;
+    width: 23%;
+    height: 200px;
+    text-align: center;
+    font-size: 2rem;
+    gap: 20px;
+    padding: 10px;
+    background-color: white;
+    box-shadow: 0.5rem 0.5rem 0.5rem 0.5rem darkblue;
+}
+
+.card_wrapper .card i {
+    font-size: 5rem;
+}
+
+section {
+    width: 100%;
+    padding: 20px;
+    background: url(./fgfg-min.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+section .card_wrap {
+    width: 1200px;
+    margin: auto;
+    display: flex;
+}
+
+section .card_wrap .cards {
+    width: 49%;
+    height: 60rem;
+    background-color: black;
+    color: white;
+    font-size: 1.5rem;
+}
+
+section .card_wrap .cards h3 {
+    display: flex;
+    align-items: flex-end;
+}
+
+section .card_wrap .cards input {
+    width: 50rem;
+    height: 5rem;
+    padding: 0rem 4rem  ;
+    border: none;
+    outline: none;
+    border-bottom: 1px solid white;
+    margin: 0rem 3rem;
+}
+
+section .card_wrap .cards h1 {
+    font-size: 3rem;
+    font-weight: 900;
+    padding: 3rem;
+}
+
+section .card_wrap .cards label {
+    margin: 0rem 3rem;
+}
+
+section .card_wrap .cards textarea {
+    margin: 0rem 3.3rem;
+    width: 50rem;
+    height: 9rem;
+}
+
+section .card_wrap .cards button {
+    margin: 2rem 0rem   ;
+    width: 50rem;
+    height: 4rem;
+    margin: 0rem 3.3rem; 
+    text-transform: uppercase;   
+}
+
+section .card_wrap .cards h3 a {
+    color: white;
+}
+
+section .card_wrap .cards h3 {
+    margin: 8rem 4rem;
+} */
